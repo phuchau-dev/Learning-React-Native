@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
+import { fontFamilies } from './src/constants/fontFamilies';
 
 const App = () => {
   return (
@@ -16,11 +17,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'coral',
     justifyContent: 'center',
-    alignItems: 'center', // Chữ 'i' phải viết hoa
+    alignItems: 'center', 
   },
   title: {
-    fontWeight: '700', // Phải là chuỗi
+    fontFamily:fontFamilies.bold,
     fontSize: 32,
-    color: 'white', // 'color' thay vì 'colors'
+    color: 'white', 
   },
 });
