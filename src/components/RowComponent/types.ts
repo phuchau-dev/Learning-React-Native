@@ -12,5 +12,5 @@ export interface Props {
     | 'space-evenly'
     | undefined;
   onPress?: () => void;
-  style?:StyleProp<ViewStyle>
+  styles?:StyleProp<ViewStyle>
 }

@@ -17,6 +17,7 @@ import TextComponent from '../../components/TextComponent';
 import TitleComponent from '../../components/TitleComponent';
 import { FONT_FAMILIES } from '../../constants/fontFamilies';
 import { COLORS } from '../../constants/colors';
+import CardComponent from '../../components/CardComponent';
 
 type HomeScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -55,10 +56,27 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
         <TitleComponent text="Be Productive Today" />
       </SectionComponent>
       <SectionComponent>
-        <RowComponent style={[globalStyles.inputContainer]} onPress={() => console.log('search')}>
+        <RowComponent
+          styles={[globalStyles.inputContainer]}
+          onPress={() => console.log('search')}
+        >
           <TextComponent text="Search" />
           <Text>Icon</Text>
         </RowComponent>
+      </SectionComponent>
+      <SectionComponent>
+        <CardComponent>
+          <RowComponent>
+            <View style={{ flex: 1 }}>
+              <TitleComponent text="Task Propress" />
+              <TextComponent text="30/40 task done" />
+              <TextComponent text="Tag" />
+            </View>
+            <View>
+              <TextComponent text="Circle Char" />
+            </View>
+          </RowComponent>
+        </CardComponent>
       </SectionComponent>
       <SectionComponent>
         <Button title="Logout" onPress={handleLogout} />
