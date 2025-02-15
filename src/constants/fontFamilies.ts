@@ -1,6 +1,6 @@
-export const fontFamilies = {
-  rerular: 'Poppins-Regular',
-  medium:'Poppins-Medium',
-  semiBold: 'Poppins-SemiBold',
-  bold: 'Poppins-Bold',
-}
+export const FONT_FAMILIES = {
+  REGULAR: 'Poppins-Regular',
+  MEDIUM: 'Poppins-Medium',
+  SEMI_BOLD: 'Poppins-SemiBold',
+  BOLD: 'Poppins-Bold',
+} as const;

@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from '../screens/SplashScreen';
 import LoginScreen from '../screens/LoginScreen';
-import HomeScreen from '../screens/HomeScreen';
+import HomeScreen from '../screens/homes/HomeScreen';
 import { RootStackParamList } from '../types';
 
 const Stack = createStackNavigator<RootStackParamList>();
