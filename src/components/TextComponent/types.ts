@@ -1,4 +1,4 @@
-import { TextStyle } from 'react-native';
+import { StyleProp,TextStyle } from 'react-native';
 
 export interface Props {
   text: string;
@@ -6,5 +6,5 @@ export interface Props {
   font?: string;
   color?: string;
   flex?: number;
-  style?: TextStyle; 
+  styles?: StyleProp<TextStyle>;
 }

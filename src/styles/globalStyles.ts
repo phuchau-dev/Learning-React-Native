@@ -30,4 +30,10 @@ export const globalStyles = StyleSheet.create({
     alignItems: 'center',
     
   },
+  tag:{
+    paddingHorizontal:20,
+    paddingVertical:Platform.select({ ios: 6, android: 4 }),
+    borderRadius:100,
+    backgroundColor:COLORS.BLUE
+  }
 });

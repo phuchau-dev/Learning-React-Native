@@ -5,12 +5,12 @@ import { globalStyles } from '../../styles/globalStyles';
 import { FONT_FAMILIES } from '../../constants/fontFamilies';
 import { COLORS } from '../../constants/colors';
 
-const TextComponent = ({ text, size, font, color, flex, style }: Props) => {
+const TextComponent = ({ text, size, font, color, flex, styles }: Props) => {
   return (
     <Text
       style={[
         globalStyles.text,
-        style, // Cho phép ghi đè từ bên ngoài
+        styles, // Cho phép ghi đè từ bên ngoài
         {
           flex: flex ?? 1,
           fontFamily: font ?? FONT_FAMILIES.REGULAR,
