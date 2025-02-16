@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import {
   View,
-  Text,
   Button,
   BackHandler,
   TouchableOpacity,
@@ -19,12 +18,15 @@ import { FONT_FAMILIES } from '../../constants/fontFamilies';
 import { COLORS } from '../../constants/colors';
 import CardComponent from '../../components/CardComponent';
 import {
+  Edit2,
   Element4,
   Notification,
   SearchNormal1,
 } from 'iconsax-react-native';
 import TagComponent from '../../components/TagComponent';
 import SpaceComponent from '../../components/SpaceComponent';
+import CircularComponent from '../../components/CircularComponent';
+import CardImageConponent from '../../components/CardImageComponent';
 
 type HomeScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -80,16 +82,75 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
             <View style={{ flex: 1 }}>
               <TitleComponent text="Task Propress" />
               <TextComponent text="30/40 task done" />
-              <SpaceComponent height={12}/>
+              <SpaceComponent height={12} />
               <RowComponent justify="flex-start">
-                <TagComponent text="March 22" onPress={()=>console.log('tag')} />
+                <TagComponent
+                  text="March 22"
+                  onPress={() => console.log('tag')}
+                />
               </RowComponent>
             </View>
             <View>
-              <TextComponent text="Circle Char" />
+              <CircularComponent value={80} />
             </View>
           </RowComponent>
         </CardComponent>
+      </SectionComponent>
+      <SectionComponent>
+        <RowComponent styles={{ alignItems: 'flex-start' }}>
+          <View
+            style={{
+              flex: 1,
+            }}
+          >
+            <CardImageConponent>
+              <TouchableOpacity
+                onPress={() => {}}
+                style={globalStyles.iconContainer}
+              >
+                <Edit2 size={20} color={COLORS.WHITE} />
+              </TouchableOpacity>
+              <TitleComponent text="UX Design" />
+              <TextComponent
+                text="Task management mobile app"
+                size={13}
+              />
+            </CardImageConponent>
+          </View>
+          <SpaceComponent width={16} />
+          <View style={{ flex: 1 }}>
+            <CardImageConponent color="rgba(33, 150, 243, 0.9)">
+              <TouchableOpacity
+                onPress={() => {}}
+                style={globalStyles.iconContainer}
+              >
+                <Edit2 size={20} color={COLORS.WHITE} />
+              </TouchableOpacity>
+              <TitleComponent
+                text="API Payment"
+                size={18}
+              />
+              <TextComponent
+                text="Revision home page"
+                size={13}
+              />
+            </CardImageConponent>
+            <SpaceComponent height={16} />
+            <CardImageConponent color="rgba(18, 181, 22, 0.9)">
+              <TouchableOpacity
+                onPress={() => {}}
+                style={globalStyles.iconContainer}
+              >
+                <Edit2 size={20} color={COLORS.WHITE} />
+              </TouchableOpacity>
+              <TitleComponent text="Update work" />
+              <TextComponent
+                text="Revision home page"
+                size={13}
+              />
+            </CardImageConponent>
+          </View>
+        </RowComponent>
       </SectionComponent>
       <SectionComponent>
         <Button title="Logout" onPress={handleLogout} />

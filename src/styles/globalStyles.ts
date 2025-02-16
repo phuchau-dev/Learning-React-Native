@@ -35,5 +35,17 @@ export const globalStyles = StyleSheet.create({
     paddingVertical:Platform.select({ ios: 6, android: 4 }),
     borderRadius:100,
     backgroundColor:COLORS.BLUE
-  }
+  },
+  card: {
+    borderRadius: 12,
+  },
+  iconContainer: {
+    width: 40,
+    height: 40,
+    borderRadius: 100,
+    backgroundColor: 'rgba(0,0,0,0.2)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
 });
